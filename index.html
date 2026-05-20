@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stablecoin Regulatory Radar</title>
+<meta name="description" content="AI-powered regulatory monitoring for the stablecoin ecosystem. Tracking legislation across Hong Kong, US, EU, and Singapore.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1>Stablecoin Regulatory Radar</h1>
+    <p class="subtitle">AI-powered regulatory monitoring for the stablecoin ecosystem</p>
+    <p class="updated" id="last-updated">Loading...</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Jurisdiction Cards -->
+  <section class="cards-section">
+    <h2>Jurisdiction Overview</h2>
+    <div class="cards-grid" id="cards-grid">
+      <!-- Rendered by app.js -->
+    </div>
+  </section>
+
+  <!-- Regulatory Timeline -->
+  <section class="timeline-section">
+    <h2>Recent Regulatory Developments</h2>
+    <div class="filters" id="timeline-filters">
+      <!-- Rendered by app.js -->
+    </div>
+    <div class="timeline" id="timeline">
+      <!-- Rendered by app.js -->
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about-section">
+    <h2>About This Project</h2>
+    <div class="about-content">
+      <p>The <strong>Stablecoin Regulatory Radar</strong> tracks regulatory developments affecting stablecoins and digital payments across four key jurisdictions. Each day, an automated pipeline fetches regulatory news from RSS feeds, analyzes it using AI (DeepSeek), and updates this dashboard with structured summaries and impact assessments.</p>
+
+      <div class="methodology">
+        <h3>Methodology</h3>
+        <ol>
+          <li><strong>Collect</strong> — RSS feeds from Google News, CoinDesk, CoinTelegraph, and The Block are fetched daily for jurisdiction-specific keywords.</li>
+          <li><strong>Analyze</strong> — Each article is processed by an LLM (DeepSeek) that summarizes the regulatory development, classifies its impact, and scores the regulatory climate for that jurisdiction (1 = restrictive, 10 = innovation-friendly).</li>
+          <li><strong>Generate</strong> — Analysis results are aggregated into jurisdiction scores and a chronological timeline, then deployed to this static site.</li>
+        </ol>
+      </div>
+
+      <div class="jurisdiction-info">
+        <h3>Monitored Jurisdictions</h3>
+        <div class="jurisdiction-grid">
+          <div class="jurisdiction-item">🇭🇰 <strong>Hong Kong</strong> — HKMA (Stored Value Facility + upcoming stablecoin licensing)</div>
+          <div class="jurisdiction-item">🇺🇸 <strong>United States</strong> — Fed / OCC / SEC (federal stablecoin legislation + state-level frameworks)</div>
+          <div class="jurisdiction-item">🇪🇺 <strong>European Union</strong> — EBA / ESMA (MiCA regulation)</div>
+          <div class="jurisdiction-item">🇸🇬 <strong>Singapore</strong> — MAS (Payment Services Act + stablecoin framework)</div>
+        </div>
+      </div>
+
+      <p class="disclaimer"><strong>Disclaimer:</strong> This site is for informational purposes only and does not constitute legal advice. Regulatory summaries are AI-generated and may contain inaccuracies. Always consult official sources and qualified legal counsel for compliance decisions.</p>
+
+      <p class="attribution">Built with Python, DeepSeek AI, and GitHub Pages. <a href="https://github.com/nickduan/stablecoin-regulatory-radar" target="_blank" rel="noopener">View on GitHub</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Stablecoin Regulatory Radar. All analysis is AI-generated and for informational purposes only.</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
