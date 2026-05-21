@@ -42,7 +42,7 @@
 
   // --- Render jurisdiction cards ---
   function renderCards(summaries, container) {
-    const order = ['hk', 'us', 'eu', 'sg'];
+    const order = ['hk', 'cn', 'us', 'eu', 'sg'];
     let html = '';
     for (const id of order) {
       const j = summaries[id];
